@@ -1,0 +1,256 @@
+
+body{
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1280px;
+    align-items: center;
+    margin-right: auto;
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover{
+    width: 100%;
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+
+    margin-top: 100px;
+    height: 660px;
+    overflow: hidden;
+}
+
+.cover img{
+    max-width: 1000px;
+}
+
+.hstack{
+    display: flex;
+    flex-direction: row;
+}
+
+.hstack_important{
+    display: flex;
+    flex-direction: row;
+}
+
+.vstack{
+    display: flex;
+    flex-direction: column;
+}
+
+.gap8{
+    gap:8px
+}
+
+.gap24{
+    gap:24px
+}
+
+.gap48{
+    gap:48px
+}
+
+.block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 100px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    border-radius: 24px;
+    height: 440px;
+
+    overflow: hidden;
+}
+
+.card h5{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+    text-align: center;
+}
+
+.howto{
+    min-height: 700px;
+    border-radius: 50px;
+    box-sizing: border-box;
+
+}
+
+.lymeimg{
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    z-index: -1;
+    margin-top: -70px;
+}
+
+.download{
+    padding-left: 32px;
+    padding-top: 140px;
+    padding-bottom: 48px;
+    border-radius: 32px;
+
+    position: relative;
+}
+
+.bike2{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.bike2mob{
+    display: none;
+}
+
+.download span{
+    align-items: baseline;
+}
+
+.colorlogo{
+    height: 48px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.popup {
+    width: 100%;
+    max-width: 540px;
+    border-radius: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 2;
+  }
+
+.qrimg{
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin-top: 32px;
+}
+
+.down{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 24px 16px;
+
+    box-sizing: border-box;
+
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: var(--black100);
+
+    border-radius: 16px 16px 0px 0px;
+}
+
+
+  @media screen and (max-width: 1280px) {
+
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }    
+
+    .howto{
+        align-items: center;
+        background-color: var(--lyme);
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 50px;
+    }
+
+    .download{
+        padding-top: 24px;
+    }
+
+    .bike2{
+        display: none;
+    }
+
+    .bike2mob{
+        display: block;
+        margin-bottom: -40px;
+    }
+
+    .down{
+        display: flex;
+    }
+}
+
+/* Скрывает элементы */
+.hidden {
+    display: none;
+}
+
+/* Плавное появление и исчезновение для попапа и оверлея */
+.visible {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+@media screen and (max-width: 530px) {
+    .hstack{
+        flex-direction: column;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cover{
+        margin-top: 40px;
+        height: 500px;
+    }
+
+    .cover img{
+        height: 350px;
+    }
+    
+}

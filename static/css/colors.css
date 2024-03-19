@@ -1,0 +1,38 @@
+:root {
+    --black100: #121212;
+    --black90: #393D3F;
+    --black80: #747C81;
+
+    --green: #00DE00;
+    --lyme: #E1FF09;
+
+    --white90: #FDFDFF;
+    --white80: #F2F2F2;
+
+}
+
+
+.black90{
+    color: var(--black90);
+}
+
+.black80{
+    color: var(--black80);
+}
+
+.white80bg{
+    background-color: var(--white80);
+}
+
+.black90bg{
+    background-color: var(--black90);
+}
+
+
+.greenbg{
+    background-color: var(--green);
+}
+
+.lymebg{
+    background-color: var(--lyme);
+}

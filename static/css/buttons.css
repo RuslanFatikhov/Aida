@@ -1,0 +1,51 @@
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: transparent;
+    cursor: pointer;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.ghost{
+    background: none;
+    border: none;
+}
+
+
+.border_m{
+    padding: 14px 16px;
+    border: 1px solid var(--black90);
+    border-radius: 10px;
+}
+
+
+.sizem{
+    padding: 14px 24px;
+    border-radius: 10px;
+    border: none;
+
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -5%;
+}
+
+
+.sizes{
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -5%;
+}
+
