@@ -39,7 +39,7 @@
         <!--Cover-->
         <div class="cover">
             <h1 class="bold black90 center">Айда с ветерком</h1>
-            <img src="../static/src/bike_1.png" alt="bike">
+            <img src="../static/src/cover.png" alt="cover">
         </div>
 
         <!--How-to-->
@@ -47,27 +47,43 @@
             <h3 class="bold black90 center">Легкий старт</h3>
             <div class="grid">
                 <div class="card greenbg">
-                    <h5 class="bold90">Находите велосипед<br>на карте</h5>
+                    <h5 class="black90">Находите велосипед<br>на карте</h5>
                     <img src="../static/src/img1.png" alt="Phone with map">
                 </div>
                 <div class="card greenbg">
-                    <h5 class="bold90">Отсканируйте QR-код на велосипеде</h5>
+                    <h5 class="black90">Отсканируйте QR-код на велосипеде</h5>
                     <img src="../static/src/img2.png" alt="Scan qr on bike">
                 </div>
                 <div class="card greenbg">
-                    <h5 class="bold90">Арендуете велосипед</h5>
+                    <h5 class="black90">Арендуете велосипед</h5>
                     <img src="../static/src/img3.png" alt="Biking">
                 </div>
                 <div class="card greenbg">
-                    <h5 class="bold90">Возращаете на любую удобную парковку</h5>
+                    <h5 class="black90">Возращаете на любую удобную парковку</h5>
                     <img src="../static/src/img4.png" alt="Parking">
                 </div>
             </div>
             <img class="lymeimg" src="../static/src/lyme-bg.svg" alt="lyme">
         </div>
 
+        <!--Tarif-->
+        <div class="block tarif">
+            <h3 class="bold black90 center mt48">Тарифы</h3>
+
+            <div class="hstack gap16">
+                <div class="card lymebg gap8">
+                    <h1 class="black90 bold">199₸</h1>
+                    <p class="black90">30 минут/далее 49₸ за минуту</p>
+                </div>
+
+                <div class="card bluebg">
+                    <h3 class="white90">Абонемент</h3>
+                </div> 
+            </div>
+        </div>
+
         <!--Download-->
-        <div class="block">
+        <div class="block mt100">
             <div class="download white80bg">
                 <span class="vstack gap24">
                     <h3 class="bold black90">Ваш ключ к свободе<br>в приложении</h3>
@@ -80,8 +96,13 @@
         
         <!-- Попап -->
         <div class="popup hidden white90bg">
-            <h4 class="bold black90 center">Сканируйте QR-код для загрузки приложения</h4>
-            <img class="qrimg" src="../static/src/qr.png" alt="qr">
+            <img src="../static/src/logo-color.svg" alt="Aida logo">
+            <div class="desktop">
+                <h4 class="bold black90 center">Сканируйте QR-код для загрузки приложения</h4>
+                <img class="qrimg" src="../static/src/qr.png" alt="qr">
+            </div>
+         
+            <button class="sizem lymebg" id="downButton">Скачать</button>
         </div>
   
         <!-- Затемненный фон -->
@@ -90,7 +111,7 @@
         <!--Down-->
         <div class="down black90bg">
             <img src="../static/src/white-icon-logo.svg" alt="logo">
-            <button class="sizes lymebg" id="downButton">Скачать</button>
+            <button class="sizem lymebg" id="downButton">Скачать</button>
         </div>
     </main>
 
@@ -99,42 +120,9 @@
 
     <!-- Подключение jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Подключение вашего скрипта -->
     <script src="../static/js/components.js"></script>
-    <script src="../static/js/popup.js"></script>
-
-    <!--downButtonScript-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    var downButton = document.getElementById('downButton');
+    <script src="../static/js/scripts.js"></script>
     
-    if (!downButton) {
-        console.error('Кнопка с ID "downButton" не найдена.');
-        return;
-    }
 
-    downButton.addEventListener('click', function() {
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        
-        console.log("Кнопка нажата. User agent:", userAgent); // Для диагностики
-
-        // Check if the user is on iOS
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            console.log('Перенаправление на Apple.');
-            window.location.href = 'https://www.apple.com/';
-        }
-        // Check if the user is on Android
-        else if (/android/i.test(userAgent)) {
-            console.log('Перенаправление на Android.');
-            window.location.href = 'https://play.google.com/store';
-        }
-        // Добавим else для отладки
-        else {
-            console.log('Устройство не определено или не соответствует условиям для iOS/Android.');
-        }
-    });
-});
-
-    </script>
 </body>
 </html>

@@ -5,7 +5,8 @@
 
     <div class="desktop">
         <span class="hstack">
-            <a class="ghost"><p class="black80">Ережелер</p></a>
+            <!-- Обновленная ссылка на страницу с правилами, включающая текущий язык -->
+            <a href="/rules?lang=kz" class="ghost"><p class="black80">Ережелер</p></a>
 
             <!--Selector with URL parameters-->
             <span class="switcher">
@@ -16,8 +17,26 @@
     </div>
 
     <div class="mobile">
-        <button class="ghost icon">
+        <button id="menuToggle" class="ghost icon">
             <img src="../static/src/menu.svg" alt="menu">
         </button>
     </div>
+
+    <!-- Меню -->
+    <div id="sidebarMenu" class="sidebar-menu white90bg">
+
+        <button id="closeMenu" class="close-menu"><img src="../static/src/close.svg" alt="close"></button>
+
+        <div class="vstack gap24">
+            <span class="switcher">
+                <a href="/?lang=ru" class="ghost black90"><p>Рус</p></a>
+                <a href="/?lang=kz" class="border_m black90"><p>Қаз</p></a>
+            </span>
+
+            <a href="/rules?lang=kz" class="ghost"><h4 class="black80">Ережелер</h4></a>
+        </div>
+
+    </div>
+
+
 </header>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="kz">
+<head>
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aida | Правила</title>
+    <meta name="description" content="Aida - ваш городской байкшеринг. Найдите ближайший велосипед и начните своё путешествие сейчас!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aida | Городской байкшеринг">
+    <meta property="og:description" content="Найдите ближайший велосипед и начните своё путешествие с Aida!">
+    <meta property="og:image" content="../static/src/meta/meta_index_ru.jpg">
+
+
+    
+
+    <!--Links-->
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/colors.css">
+    <link rel="stylesheet" href="../static/css/fonts.css">
+    <link rel="stylesheet" href="../static/css/buttons.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <!--Fav-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/src/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/src/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/src/fav/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e1ff09">
+    <meta name="msapplication-TileColor" content="#e1ff09">
+    <meta name="theme-color" content="#e1ff09">
+</head>
+<body>
+    <!--Header-->
+    <div id="header"></div>
+
+
+    <main>
+        <h1>Правила</h1>
+    </main>
+
+
+    <!--Footer-->
+    <div id="footer"></div>
+
+    <!-- Подключение jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Подключение вашего скрипта -->
+    <script src="../static/js/components.js"></script>
+    <script src="../static/js/popup.js"></script>
+
+    <!--downButtonScript-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var downButton = document.getElementById('downButton');
+    
+    if (!downButton) {
+        console.error('Кнопка с ID "downButton" не найдена.');
+        return;
+    }
+
+    downButton.addEventListener('click', function() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        
+        console.log("Кнопка нажата. User agent:", userAgent); // Для диагностики
+
+        // Check if the user is on iOS
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            console.log('Перенаправление на Apple.');
+            window.location.href = 'https://www.apple.com/';
+        }
+        // Check if the user is on Android
+        else if (/android/i.test(userAgent)) {
+            console.log('Перенаправление на Android.');
+            window.location.href = 'https://play.google.com/store';
+        }
+        // Добавим else для отладки
+        else {
+            console.log('Устройство не определено или не соответствует условиям для iOS/Android.');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
