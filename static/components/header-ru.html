@@ -1,29 +1,45 @@
 <header>
-    <a href="../">
+    <a href="/">
         <img src="../static/src/logo-black.svg" alt="Aida">
     </a>
 
     <div class="desktop">
         <span class="hstack">
-
-            <a class="ghost"><p class="black80">Правила</p></a>
-
+            <!-- Обновленная ссылка на страницу с правилами -->
+            <a href="/rules?lang=ru" class="ghost"><p class="black80">Правила</p></a>
 
             <!--Selector-->
             <span class="switcher">
                 <a href="/?lang=ru" class="border_m black90"><p>Рус</p></a>
                 <a href="/?lang=kz" class="ghost black90"><p>Қаз</p></a>
             </span>
-
-
-
         </span>
     </div>
 
     <div class="mobile">
-        <button class="ghost icon">
+        <button id="menuToggle" class="ghost icon">
             <img src="../static/src/menu.svg" alt="menu">
         </button>
     </div>
 
+    <!-- Меню -->
+    <div id="sidebarMenu" class="sidebar-menu white90bg">
+
+        <button id="closeMenu" class="close-menu"><img src="../static/src/close.svg" alt="close"></button>
+
+        <div class="vstack gap24">
+            <span class="switcher">
+                <a href="/?lang=ru" class="border_m black90"><p>Рус</p></a>
+                <a href="/?lang=kz" class="ghost black90"><p>Қаз</p></a>
+            </span>
+
+            <a href="/rules?lang=ru" class="ghost"><h4 class="black80">Правила</h4></a>
+        </div>
+
+    </div>
+
+
 </header>
+
+
+    

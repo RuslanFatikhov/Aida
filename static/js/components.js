@@ -6,9 +6,11 @@ $(document).ready(function() {
     var headerPath = 'static/components/header-' + lang + '.html';
     var footerPath = 'static/components/footer-' + lang + '.html';
 
-    // Динамическая загрузка header и footer
-    $("#header").load(headerPath);
+    // Динамическая загрузка header и вызов инициализации меню после загрузки
+    $("#header").load(headerPath, function() {
+        initializeMenuToggle(); // Убедитесь, что эта функция объявлена в scripts.js
+    });
+
+    // Динамическая загрузка footer
     $("#footer").load(footerPath);
 });
-
-

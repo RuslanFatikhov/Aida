@@ -4,11 +4,17 @@
     --black80: #747C81;
 
     --green: #00DE00;
-    --lyme: #E1FF09;
+    --lyme: #CBF65E;
+    --blue:#5AA9E6;
+    --red:#FD4D17;
 
     --white90: #FDFDFF;
     --white80: #F2F2F2;
 
+}
+
+.white90{
+    color: var(--white90);
 }
 
 
@@ -24,6 +30,10 @@
     background-color: var(--white80);
 }
 
+.white90bg{
+    background-color: var(--white90);
+}
+
 .black90bg{
     background-color: var(--black90);
 }
@@ -35,4 +45,12 @@
 
 .lymebg{
     background-color: var(--lyme);
+}
+
+.bluebg{
+    background-color:var(--blue);
+}
+
+.redbg{
+    background-color: var(--red);
 }

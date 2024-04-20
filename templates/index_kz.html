@@ -40,7 +40,7 @@
         <!--Cover-->
         <div class="cover">
             <h1 class="bold black90 center">Айда желмен</h1>
-            <img src="../static/src/bike_1.png" alt="bike">
+            <img src="../static/src/cover.png" alt="cover">
         </div>
 
         <!--How-to-->
@@ -50,22 +50,22 @@
             <div class="grid">
 
                 <div class="card greenbg">
-                    <h5 class="bold90">Картадан велосипед табыңыз</h5>
+                    <h5 class="black90">Картадан велосипед табыңыз</h5>
                     <img src="../static/src/img1.png" alt="Phone with map">
                 </div>
 
                 <div class="card greenbg">
-                    <h5 class="bold90">Велосипедте QR кодын сканерлеңіз</h5>
+                    <h5 class="black90">Велосипедте QR кодын сканерлеңіз</h5>
                     <img src="../static/src/img2.png" alt="Scan qr on bike">
                 </div>
 
                 <div class="card greenbg">
-                    <h5 class="bold90">Велосипедті жалға алыңыз</h5>
+                    <h5 class="black90">Велосипедті жалға алыңыз</h5>
                     <img src="../static/src/img3.png" alt="Biking">
                 </div>
 
                 <div class="card greenbg">
-                    <h5 class="bold90">Кез келген ыңғайлы тұраққа қайтарыңыз</h5>
+                    <h5 class="black90">Кез келген ыңғайлы тұраққа қайтарыңыз</h5>
                     <img src="../static/src/img4.png" alt="Parking">
                 </div>
 
@@ -75,7 +75,7 @@
         </div>
 
         <!--Download-->
-        <div class="block">
+        <div class="block mt100">
             
             <!--Download-->
             <img class="bike2mob" src="../static/src/bike2.png" alt="bike">
@@ -94,11 +94,13 @@
         
         <!-- Попап -->
         <div class="popup hidden white90bg">
-            <!--span class="close-btn">&times;</span-->
-
-            <h4 class="bold black90 center">Aida қосымшасына өту үшін сканерлеңіз</h4>
-            <img class="qrimg" src="../static/src/qr.png" alt="qr">
+            <img src="../static/src/logo-color.svg" alt="Aida logo">
+            <div class="desktop">
+                <h4 class="bold black90 center">Aida қосымшасына өту үшін сканерлеңіз</h4>
+                <img class="qrimg" src="../static/src/qr.png" alt="qr">
+            </div>
             
+            <button class="sizem lymebg" id="downButton">Жүктеу</button>
         </div>
   
         <!-- Затемненный фон -->
@@ -108,7 +110,7 @@
         <div class="down black90bg">
             <img src="../static/src/white-icon-logo.svg" alt="logo">
 
-            <button>Жүктеу</button>
+            <button class="sizem lymebg" id="downButton">Жүктеу</button>
         </div>
     </main>
 
@@ -117,10 +119,10 @@
 
     <!-- Подключение jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Подключение вашего скрипта -->
     <script src="../static/js/components.js"></script>
+    <script src="../static/js/scripts.js"></script>
 
-    <script src="../static/js/popup.js"></script>
+    
 
 
 </body>

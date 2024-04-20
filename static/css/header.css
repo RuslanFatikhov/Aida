@@ -31,6 +31,40 @@ header span{
     display: none;
 }
 
+/* Скрыть меню по умолчанию */
+#sidebarMenu {
+    position: fixed;
+    right: -100%; /* Ширина меню */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 24px 16px;
+    z-index: 1;
+    transition: right 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+/* Стиль для активного меню */
+#sidebarMenu.active {
+    right: 0;
+}
+
+
+.close-menu {
+    position: absolute;
+    top: 24px; /* Регулируйте по своему усмотрению */
+    right: 16px; /* Регулируйте по своему усмотрению */
+    background: #fff; /* Или любой другой цвет, соответствующий дизайну */
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
 @media screen and (max-width: 1300px) {
     header{
         padding-left: 16px;
@@ -49,3 +83,4 @@ header span{
         display: block;
     }
 }
+
